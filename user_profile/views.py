@@ -3,9 +3,9 @@ from django.http import HttpResponse
 from django.http import HttpResponseBadRequest
 from django.http import HttpResponseForbidden
 from django.utils import translation
-from softgis_profile.models import Profile
+from user_profile.models import Profile
 from django.core.exceptions import ObjectDoesNotExist
-from Commons import SoftGISFormatUtils
+from geonition_utils.Commons import SoftGISFormatUtils
 
 import settings
 import logging

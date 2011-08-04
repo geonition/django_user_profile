@@ -2,7 +2,7 @@
 from django.conf.urls.defaults import patterns
 from django.conf.urls.defaults import url
 
-urlpatterns = patterns('softgis_profile.views',
+urlpatterns = patterns('user_profile.views',
                        
             #profile rest
             url(r'^',
