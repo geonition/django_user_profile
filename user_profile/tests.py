@@ -50,6 +50,15 @@ class ProfileTest(TestCase):
                           30,
                           "The profile query did not return the right json")
         
+        #test that the profile includes the following fields: user_id, create_time, expire_time
+        properties = response_dict[0]
+        self.assertTrue(properties.has_key('create_time'),
+                        "The feature response had no create_time property")
+        self.assertTrue(properties.has_key('expire_time'),
+                        "The feature response had no expire_time property")
+        self.assertTrue(properties.has_key('user_id'),
+                        "The feature response had no user_id property")
+        
     def test_mongodb(self):
         USE_MONGODB = getattr(settings, "USE_MONGODB", False)
         
