@@ -4,10 +4,10 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 from django.contrib.auth import logout as django_logout
 from django.contrib.auth import login as django_login
+from django.conf import settings
 
 import time
 import sys
-import settings
 import datetime
 
 if sys.version_info >= (2, 6):

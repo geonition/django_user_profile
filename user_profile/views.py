@@ -6,8 +6,7 @@ from django.utils import translation
 from user_profile.models import Profile
 from django.core.exceptions import ObjectDoesNotExist
 from geonition_utils.Commons import SoftGISFormatUtils
-
-import settings
+from django.conf import settings
 import logging
 import sys
 import datetime
@@ -32,7 +31,7 @@ def profile(request):
             
     if not request.user.is_authenticated():
         logger.warning("A %s request was received in the profile but the user is not authenticated" % request.method)
-        return HttpResponseForbidden(_("The request has to be made by an signed in user"))
+        return HttpResponseForbidden("The request has to be made by an signed in user")
         
     if(request.method == "GET"):
         # get the definied limiting parameters
