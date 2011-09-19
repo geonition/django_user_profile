@@ -1,1 +1,3 @@
 This django app provides REST service for modifying user profile values
+
+This application is depracated and the opensocial_people should be used instead..
