@@ -30,13 +30,16 @@ class ProfileTest(TestCase):
     
     
     def test_profile(self):
+        
         user = User.objects.create_user('profiletestuser', '', 'passwd')
         user.save() #something wrong sith setup?
+        
         self.client.login(username='profiletestuser', password='passwd')
         
         profile_dict = {
             'age': 30
         }
+        
         
         self.client.post(reverse('api_profile'),
                          json.dumps(profile_dict),
